@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ChamgeLettersApp</string>
+
+    <string name="inputText">Add the Text you wish to edit</string>
+    <string name="inputLetter">Add the letter you wish to replace</string>
+    <string name="changeLetter">Add the letter you want to chamge it to</string>
+
+    <string name="switchButton">Switch Letters</string>
+    <string name="copyButton">Copy to Clipboard</string>
+    <string name="consonantButton">Remove Consonant</string>
+    <string name="vowelButton">Remove Vowel</string>/>
+
+</resources>
