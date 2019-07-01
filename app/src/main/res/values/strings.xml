@@ -10,4 +10,7 @@
     <string name="consonantButton">Remove Consonant</string>
     <string name="vowelButton">Remove Vowel</string>/>
 
+
+    <!--Content Descriptions-->
+    <string name="lemgthposttext">Link to "lemgthbook.com"</string>
 </resources>

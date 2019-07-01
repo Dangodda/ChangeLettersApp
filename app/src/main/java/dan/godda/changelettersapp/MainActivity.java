@@ -64,7 +64,7 @@ public class MainActivity extends Activity {
 
     public String chamgeLetter(String string)
     {
-        char chars[] = new char[string.length()];
+        char[] chars = new char[string.length()];
         int index = 0;
 
         for (int z = 0; z < string.length(); z++) {
@@ -103,9 +103,8 @@ public class MainActivity extends Activity {
 
     public String changeVowel(String string)
     {
-        char chars[] = new char[string.length()];
+        char[] chars = new char[string.length()];
         int index = 0;
-        Character blank = null;
 
         for (int z = 0; z < string.length(); z++) {
 
@@ -143,9 +142,8 @@ public class MainActivity extends Activity {
 
     public String changeConsonant(String string)
     {
-        char chars[] = new char[string.length()];
+        char[] chars = new char[string.length()];
         int index = 0;
-        Character blank = null;
 
         for (int z = 0; z < string.length(); z++) {
 
@@ -163,12 +161,13 @@ public class MainActivity extends Activity {
             }
             index++;
         }
+            newLine = String.valueOf(chars);
             return newLine;
 
     }
 
 
-    public void copytoClipbaord(View view)
+    public void copytoClipboard(View view)
     {
         final android.content.ClipboardManager clipboardManager = (ClipboardManager)getSystemService(CLIPBOARD_SERVICE);
         ClipData clipData = ClipData.newPlainText("Source Text", newLine);

@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="top|center"
+    android:background="@color/blue"
     android:padding="50dp"
     tools:context=".MainActivity">
 
@@ -15,6 +16,9 @@
         android:text="@string/inputText" />
 
     <EditText
+        android:labelFor="@id/uioriginalText"
+        android:inputType="text"
+        android:autofillHints="@string/changeLetter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/uioriginalText" />
@@ -30,6 +34,9 @@
             />
 
         <EditText
+            android:labelFor="@id/uilChoice"
+            android:inputType="text"
+            android:autofillHints="@string/changeLetter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/uilChoice"/>
@@ -46,6 +53,9 @@
             android:text="@string/changeLetter"/>
 
         <EditText
+            android:labelFor="@id/uilNew"
+            android:inputType="text"
+            android:autofillHints="@string/changeLetter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/uilNew"/>
@@ -53,43 +63,72 @@
     </LinearLayout>
 
     <Button
+        style="@style/AppTheme"
+        android:background="@drawable/bshape"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/switchButton"
-        android:onClick="chamgeLineOnClick"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/uiResult" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/copyButton"
-        android:onClick="copytoClipbaord"/>
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/logo"
-        android:onClick="lemgthClick"/>
+        android:onClick="chamgeLineOnClick" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         <Button
+            style="@style/AppTheme"
+            android:background="@drawable/bshape"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="13sp"
+            android:onClick="removeVowelOnClick"
             android:text="@string/vowelButton"
-            android:onClick="removeVowelOnClick"/>
+            android:layout_margin="5sp"
+            android:textSize="13sp" />
+
         <Button
+            style="@style/AppTheme"
+            android:background="@drawable/bshape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="removeConsonantOnClick"
+            android:text="@string/consonantButton"
+            android:layout_margin="5sp"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-            android:textSize="13sp"
-        android:text="@string/consonantButton"
-        android:onClick="removeConsonantOnClick"/>
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <Button
+            style="@style/AppTheme"
+            android:background="@drawable/bshape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/copyButton"
+            android:onClick="copytoClipboard"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/uiResult"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="bottom">
+
+        <ImageButton
+            android:contentDescription="@string/lemgthposttext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo"
+            android:onClick="lemgthClick"
+            android:background="@color/dark_blue"
+            />
     </LinearLayout>
 </LinearLayout>
